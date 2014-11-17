@@ -1,0 +1,457 @@
+* {
+    margin: 20;
+    padding: 20;
+}
+/* This sets the viewport's desired width, along with minimum and max widths */
+
+@media (max-width: 800px) and (min-width: 600px) {
+@-viewport {
+	width: 800px;
+}
+}
+
+/* General Page Styles */
+
+html {
+	min-height: 100%;
+}
+
+body {
+    margin: 20px;
+    padding: 20;
+	font-family: "Iowan Old Style", serif;
+    font-size: 13pt; 
+    color: #333333;
+    background: #ffffff;
+}
+
+
+/* Link styles */
+
+a, a:visited {
+	color: #1568a6;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #333;
+}
+
+:target:before {
+	display: block; 
+	content: " "; 
+	margin-top: -50px; 
+	height: 50px;
+}
+
+/* FIGURE STYLES */
+figure {
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+div.float-right {
+	float: right;
+	padding: 0 0 10px 10px;
+}
+
+
+/* The next three styles set up the div styles for the index.html page */
+
+#helpwrapper {
+	width: 750px;
+	padding: 20px;
+	margin: 20px;
+}
+
+#helpappid {
+	float: left;
+	width: 40%;
+	margin-right: 3em;
+}
+
+#pagewrap {
+  width: 700px;
+  padding: 10px 20px 20px 40px;
+}
+
+.appicon {
+  text-align: center;
+  padding: 70px 0 0 0;
+  margin: 0 0 0 0;
+}
+
+#helpnav {
+	float: right;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#helpnav li {
+	font-family: "HelveticaNeue-Light";
+	font-weight: normal;
+    font-size: 16pt;
+    line-height: 16pt;
+    list-style-type: none;
+    text-align: right;
+}
+
+#navheader {
+	font-family: "HelveticaNeue-Light";
+	font-weight: normal;
+	clear: both;
+	padding: 0 10px 20px 10px;
+	font-size: 8pt;
+	text-decoration: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 15px;
+	background-color: #A484C9;
+	z-index: 2;
+}
+
+a.navlink {
+	font-family: "HelveticaNeue-Light";
+	font-weight: normal;
+	color: #FFF;
+}
+
+a.navlink:hover {
+	color: #1568a6;
+}
+
+.header-title {
+	font-family: "HelveticaNeue-Medium";
+	font-weight: normal;
+	clear: both;
+	padding: 5px 10px 20px 10px;
+	font-size: 11pt;
+	position: fixed;
+	top: 0;
+	left: 200px;
+	right: 200px;
+	height: 15px;
+	z-index: 2;
+	text-align: center;
+	vertical-align: middle;
+	color: #FFF;
+	-webkit-user-select: none;
+}
+
+/* Use positioning to fix location of the TOC menu icon */
+#previous {
+	position: fixed;
+	left: 200px;
+	top: 5px;
+	vertical-align: middle;
+}
+
+/* Use positioning to fix location of the house/home icon */
+#next {
+	position: fixed;
+	right: 200px;
+	top: 5px;
+	vertical-align: middle;
+}
+
+/* Document Styles */
+
+header {
+	margin-top: 50px;
+	height: 100px;	
+	margin-bottom: 10px;
+}
+
+#headertxt {
+	margin-top: 20px;
+	float: left;
+}
+
+.platform {
+	font-size: 60%;
+	font-weight: normal;
+	color: #333333;
+	margin-left: -5px;
+}
+
+/* Heading Styles */
+
+h1,h2,h3,h4 {
+	font-family: "HelveticaNeue-Thin";
+	font-weight: normal;
+	color: #1568a6;
+}
+
+h1 {
+	font-size: 32pt;
+	margin: 1em 0 -0.5em 0;
+}
+
+span.subtitle {
+	font-size: 20pt;
+	text-align: center;
+}
+
+span.title {
+	font-family: "HelveticaNeue-UltraLight";
+	font-weight: normal;
+	font-size: 38pt;
+	text-align: center;
+}
+
+h1.title {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-size: 24pt;
+	margin: 1em 0 -0.5em 0;
+}
+
+h3 {
+	font-size: 18pt;
+	margin: 1em 0 -0.5em 0;
+}
+
+h4 {
+	font-size: 14pt;
+	margin: 1em 0 -0.5em 0;
+}
+
+#welcome {
+	font-size: 15pt;
+	color: #1568a6;
+	line-height: 1.3em;
+}
+
+img.inline_image_heading {
+	width: 25px;
+	vertical-align: baseline;
+	padding-left: 10px;
+}
+
+img.inline_image_body {
+	width: 14px;
+	vertical-align: baseline;
+	padding: 0 10px;
+}
+
+div.float-right, .floatR {
+	float: right;
+	padding: 0 0 10px 10px;
+}
+
+
+/* BODY STYLES, INCLUDING NOTES AND SIDEBARS */
+
+p {
+	margin-bottom: 1em;
+}
+
+span.filepath, code {
+	font-family: "Menlo-Bold" monospace !important;
+	font-size: 10pt;
+	line-height: 8pt;
+	width: 80%;
+	white-space: pre-wrap;
+	background-color: #f3f3f3;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+span.superscript {
+    font-size: .83em;
+    line-height: 0.5em;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+/* ---------- NOTES AND WARNINGS ---------- */
+
+div.note {
+	width: 85%;
+	font-family: "HelveticaNeue-Light" !important;
+	font-size: 11pt;
+	line-height: 16pt;
+	padding: 3px 0;
+	margin: 20px 40px;
+	page-break-inside: avoid !important;
+	break-inside: avoid !important;
+}
+
+span.note-glyph {
+	float: left;
+}
+
+span.note-glyph:before {
+	content: url(HelpImages/note.png);
+	position: absolute;
+	left: 20px;
+	opacity: 0.1;
+	vertical-align: middle;
+}
+
+div.tip {
+	width: 85%;
+	font-family: "HelveticaNeue-Light" !important;
+	font-size: 11pt;
+	line-height: 16pt;
+	padding: 3px 0;
+	margin: 20px 40px;
+	page-break-inside: avoid !important;
+	break-inside: avoid !important;
+}
+
+span.tip-glyph {
+	float: left;
+}
+
+span.tip-glyph:before {
+	content: url(HelpImages/tip.png);
+	position: absolute;
+	left: 40px;
+	opacity: 0.1;
+}
+
+div.warning {
+	width: 85%;
+	font-family: "HelveticaNeue-Light" !important;
+	font-size: 11pt;
+	line-height: 16pt;
+	padding: 3px 0;
+	margin: 20px 40px;
+	page-break-inside: avoid !important;
+	break-inside: avoid !important;
+}
+
+span.warning-glyph {
+	float: left;
+}
+
+span.warning-glyph:before {
+	content: url(HelpImages/warning.png);
+	position: absolute;
+	left: 20px;
+	opacity: 0.1;
+}
+
+div.sidebar {
+	width: 85%;
+	border-radius: 5px 20px 20px 5px;
+	border: 4px solid #CCC;
+	color: #333;
+	padding: 20px;
+	font-family: "HelveticaNeue-Light";
+	font-size: 13pt;
+	line-height: 18pt;
+	page-break-inside: avoid !important;
+	break-inside: avoid !important;
+}
+
+h2.sidebarhead {
+	font-size: 150%;
+	line-height: normal;
+	color: #333;
+	margin: 0 0 -0.5em 0 !important;
+}
+
+div.profeature {
+	border-radius: 5px 20px 5px 20px;
+	border: 4px solid #CCC;
+	background: #FFF;
+	margin: 10px 0;
+	padding: 0 15px;
+	font-family: "Iowan Old Style", serif;
+	line-height: normal;
+}
+
+div.copyright {
+	width: 85%;
+	font-family: "HelveticaNeue-Light" !important;
+	font-size: 11pt;
+	line-height: 16pt;
+	padding: 3px 0;
+	margin: 20px 40px;
+	page-break-inside: avoid !important;
+	break-inside: avoid !important;
+	page-break-before: always !important;
+	break-before: always !important;
+}
+
+
+/* LIST STYLES: INCLUDING UL, OL, AND DL */
+
+ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin: 1em 1em 1em 1em;
+}
+
+ol li {
+	margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 1em;
+}
+
+#contents {
+	clear: both;
+	line-height: 1.5em;
+	padding-bottom: 100px;
+}
+
+dt {
+	margin-top: 0.75em;
+}
+
+dd {
+	margin-left: 1.5em;
+}
+
+/* TABLE STYLES */
+
+table {
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	page-break-inside: avoid !important;
+	break-inside: avoid !important;
+	border-collapse: collapse;
+}
+
+th,td {
+	border: solid 2px #CCC;
+	padding: 4px 0 4px 8px;
+	font-family: "HelveticaNeue-Light";
+}
+
+th {
+	font-size: 12pt;
+	line-height: 14pt;
+	color: #FFF;
+	background-color: #1568a6;
+}
+
+td {
+	font-size: 11pt;
+	line-height: 14pt;
+}
+
+/* USE THE FOLLOWING FOR APP ICONS WHEN YOU WANT THEM LARGER THAN LIFE */
+
+.apphero {
+	float: right;
+	padding: 10px 0 20px 20px;
+	width: 25%;
+}

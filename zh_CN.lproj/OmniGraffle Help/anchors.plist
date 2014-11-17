@@ -1,0 +1,18 @@
+{
+    // Preferences
+    "anchor:generalpreferences" = "02_gettoknow.html#generalpreferences";
+    "anchor:drawingtoolspreferences" = "02_gettoknow.html#drawingtools";
+    "anchor:presentationmode" = "02_gettoknow.html#presentationpreferences";
+    "anchor:updatepreferences" = "02_gettoknow.html#updatepreferences";
+
+    // Licenses
+    "anchor:licensing" = "09_licenses.html";
+    "anchor:profeatures" = "01_intro.html#whatsinpro";
+
+    // Resource Browser
+    "anchor:templatechooser" = "03_canvas.html#theresourcebrowser";
+
+    // Menu Items
+    "anchor:WhatIsNewInVersion6" = "01_intro.html#whatsnew";
+    "anchor:WhatIsExtraInPro" = "01_intro.html#whatsinpro";
+}

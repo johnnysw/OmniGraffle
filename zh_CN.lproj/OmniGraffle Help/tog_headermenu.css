@@ -1,0 +1,221 @@
+/* Menu Bar */
+
+#menu {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 18px;
+	margin: 0;
+	padding: 10px 0 0 0;
+	z-index: 2;
+	background-color: #399CFF;
+	list-style: none;  
+	text-decoration: none;
+}
+
+#menu li {
+	float: left;
+	padding: 0 0 10px 0;
+	position: relative;
+	line-height: 0;
+}
+
+/* This specifies the styles for the text in the menu links. */
+#menu a  {
+	float: left;
+	height: 25px;
+	padding: 0 20px;
+	color: #999;
+	font-family: "HelveticaNeue";
+	font-weight: normal;
+	font-size: 10pt;
+	text-decoration: none;
+}
+
+/*
+This changes the color of the text when you hover over a menu item.
+*/
+#menu li:hover > a {
+	color: #fafafa;
+}
+
+/*
+This positions the bulleted hamburger icon at the left edge of the header bar so you can get to the navigation menu.
+*/
+
+#toc_menu {
+	position: fixed;
+	max-width: 20px;
+	left: 20px;
+	top: 4px;
+}
+
+/*
+This positions the house icon at the right edge of the header bar.
+*/
+#house {
+	position: fixed;
+	right: 20px;
+	top: 6px;
+	z-index: 3;
+}
+
+/* ------------------------------\         /------------------------------ */
+/* ------------------------------ Main Menu ------------------------------ */
+/* ------------------------------/         \------------------------------ */
+
+/*
+This is used to make the menu appear whenever the user hovers over the TOC icon at the right edge of the header bar along the top of the screen.
+*/
+#menu li:hover > ul {
+	display: block;
+}
+
+/* This specifies the properties of the popover menu. */
+#menu ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: fixed;
+    top: 32px;
+    left: 5px;
+    z-index: 4;    
+    background: #444;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);    
+    background: linear-gradient(#444, #111);
+    -webkit-box-shadow: 0 0 2px rgba(255,255,255,.5);
+    box-shadow: 0 0 2px rgba(255,255,255,.5);	
+    border-radius: 5px;
+}
+
+/*
+This specifies the positioning and properties of the submenu for H2 sections.
+*/
+
+ #menu ul ul {
+	position: absolute;
+	top: 0;
+	left: 192px;
+	text-align: left;
+    animation-delay: 10s;
+    /* visibility: hidden; */ <!-- uncomment to hide submenus -->
+}
+
+#menu ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+}
+
+#menu ul li:last-child {   
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+}
+
+/*
+This block specifies the width of the menu and adjusts the text position of the links within the menu. Setting the height to 100% and removing the nowrap on white-space accommodates long headings.
+*/
+#menu ul a {    
+    padding: 6px 6px 4px 6px;
+	height: 100%;
+	width: 180px;
+    line-height: 1;
+    display: block;
+    float: none;
+	text-transform: none;
+}
+
+/*
+This style specifies the colors used for the gradient you see when rolling over one of the menu items. Lighter colors come first, then the darker color.
+*/
+
+#menu ul a:hover {
+	background: #399CFF;
+    animation-timing-function: linear, ease-in-out;
+    -webkit-animation-timing-function: linear, ease-in-out;
+}
+
+#menu ul li:first-child > a {
+	border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:only-child > a {
+	border-radius: 5px 5px 5px 5px;
+}
+
+/*
+This positions the triangle at the top of the menu 20 pixels from the left edge.
+*/
+#menu ul li:first-child > a:after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+/* For the submenus. */
+
+#menu ul ul li:first-child a:after {
+    left: -8px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-left: 0;	
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-right: 8px solid #444;
+    /* visibility: hidden; */ <!-- uncomment to hide submenus -->
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #399CFF;
+}
+
+/*
+This sets the color for the tick on the left edge of a submenu and the sub-submenu.
+*/
+#menu ul ul li:first-child a:hover:after {
+    border-right-color: #399CFF;
+    border-bottom-color: transparent;
+    /* visibility: hidden; */ <!-- uncomment to hide submenus -->
+}
+
+#menu ul li:last-child > a {
+    border-radius: 0 0 5px 5px;
+}
+
+#menu ul li:only-child > a {
+	border-radius: 5px 5px 5px 5px;
+}
+
+/* Clear floated elements */
+#menu:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
+/* The following sets a space above the target URI after going to that place on the page. */
+:target:before {
+	display: block;
+	content: " ";
+	margin-top: -50px;
+	height: 50px;
+}

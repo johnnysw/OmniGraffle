@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>OmniGraffle 6.1 for Mac User Manual: OmniGraffle Extras</title>
+	<meta name="author" content="The Omni Group"/>
+	<meta name="copyright" content="The Omni Group"/>
+	<meta name="web" content="http://www.omnigroup.com"/>
+	<meta name="date" content="August 31, 2014"/>
+	<meta name="version" content="6.1.0.0"/>
+	<link type="text/css" rel="stylesheet" href="tog_help.css"/>
+	<meta name="keywords" content="Graffle, OmniGraffle, OmniGraffle Pro, OmniGraffle 6, The Omni Group, Omni Group, omnigroup, reference, user manual, help, drawing, Bezier, chart, graph, workflow, diagram"/>
+	<script src="jquery-2.1.0.min.js"></script>
+	<div id="headermenu"></div>
+	<script>
+		$("#headermenu").load("og61_headermenu.html");
+	</script>
+</head>
+<body>
+
+<div class="header-title">
+<span id="previous"><a href="06_drawingbasics.html" class="navlink" title="Previous Page">&#x276E;</a></span><img src="blank.png" width="25px" height="1px" alt="this is an empty space" />OmniGraffle Extras<img src="blank.png" width="25px" height="1px" alt="this is an empty space" /><span id="next"><a href="08_shortcuts.html" class="navlink" title="Next Page">&#x276F;</a></span>
+</div>
+
+<section id="chapter">
+<h1 id="omnigraffleextras">OmniGraffle Extras</h1>
+
+<p>We&#8217;ve built a lot of extra goodies into OmniGraffle 6.1, including the ability to import and export files from other apps on your Mac. This is particularly important for users of Microsoft<span class="superscript">&#174;</span> Visio<span class="superscript">&#174;</span> or Adobe<span class="superscript">&#174;</span> Photoshop<span class="superscript">&#174;</span>, but you&#8217;ll need to upgrade to OmniGraffle Pro to import and export to these formats.</p>
+
+<p>In addition to import/export, this section touches on some of the following advanced features of OmniGraffle:</p>
+
+<ul>
+<li>AppleScript support (<em>requires OmniGraffle Pro</em>)</li>
+<li>LinkBack support</li>
+<li>Using Regular Expressions in OmniGraffle</li>
+</ul>
+
+<h2 id="importing">Importing from Other Applications</h2>
+
+<p>Several different file formats can be understood by OmniGraffle. You can import these files by opening them just as you would open a normal OmniGraffle file (<strong>File &#x25b8; Open</strong>, or <strong>Command-O</strong>).</p>
+<div class="profeature">
+
+<p>(<strong>Pro</strong>) Microsoft<span class="superscript">&#174;</span> Visio<span class="superscript">&#174;</span> documents, templates, and stencils (.vsd, .vdx, .vst, .vtx, .vss, .vsx)</p>
+
+<ul>
+<li id="dotfiles">Documents saved by Microsoft<span class="superscript">&#174;</span> Visio<span class="superscript">&#174;</span> diagramming software in its XML-based file format (and now even in its original binary file format! Yeah!) can be read by OmniGraffle Pro. Note that while you can open the binary format, you can&#8217;t export to it; you&#8217;ll have to save as an OmniGraffle diagram or export to the XML format. Also note that graphics in the Microsoft<span class="superscript">&#174;</span> Enhanced Metafile (EMF) format can&#8217;t be imported.</li>
+</ul>
+</div>
+
+<p>DOT files (.dot)</p>
+
+<ul>
+<li>OmniGraffle understands <a href="11_dotcommands.html">a subset of the DOT language</a> used by <a href="http://www.graphviz.org">Graphviz</a>. This isn&#8217;t a full implementation of DOT, but it can be quite useful.</li>
+</ul>
+
+<p>Diagram! 2 documents (.diagram2 and .dpalette2)</p>
+
+<ul>
+<li>Diagram is a NeXTSTEP/OPENSTEP application similar to OmniGraffle. OmniGraffle can import the objects in a Diagram file, but not attached EPS images, sounds, or links.</li>
+</ul>
+
+<p>OmniOutliner documents (.ooutline and .oo3)</p>
+
+<ul>
+<li><p>When you open an OmniOutliner file, the items of the outline are interpreted as a diagram. A dialog appears; use it to indicate exactly how to interpret the outline:</p></li>
+<li><p>Use the pop-up list to choose a diagram style.</p></li>
+</ul>
+<div class="profeature">
+
+<ul>
+<li><p>(<strong>Pro</strong>) Use the table to assign objects in the diagram style to columns in the outline. If you want to show multiple columns of information for each item, use a diagram style that has grouped objects. You can also assign a column to the objects&#8217; notes.</p></li>
+<li><p>(<strong>Pro</strong>) Choose whether to put the outline in a completely new document or in a new canvas on the open document.</p></li>
+</ul>
+
+<p>(<strong>Pro</strong>) Xcode projects (.xcode), Project Builder projects (.pbproj), and frameworks (.framework)</p>
+
+<ul>
+<li>OmniGraffle uses the Objective-C headers to construct a diagram of the inheritance, protocol, and category relationships.</li>
+</ul>
+
+<p>(<strong>Pro</strong>) Interface Builder nib files (.nib)</p>
+
+<ul>
+<li>OmniGraffle graphs the connections in the nib file for easy visualization.</li>
+</ul>
+</div>
+
+<p>EOModeler files (.eomodeld)</p>
+
+<ul>
+<li>OmniGraffle creates a diagram of the database relationships described by the file.</li>
+</ul>
+
+<p>Folder structures</p>
+
+<ul>
+<li>Drag a folder from the Finder and drop it on OmniGraffle&#8217;s application icon to map out the folder&#8217;s contents as a diagram.</li>
+</ul>
+
+<h2 id="exporting">Exporting to Different Formats</h2>
+
+<p>You can create files of several different types from your OmniGraffle diagrams. Choose <strong>File &#x25b8; Export</strong> (<strong>Option-Command-E</strong>). When you export, a new file is written to the disk, leaving your original document as it is on the screen. Of course, not all aspects of a diagram can be represented in all file formats.</p>
+
+<p>The available file formats are:</p>
+
+<ul>
+<li>BMP bitmap image &#8212; A legacy graphics format.</li>
+<li>EPS vector image &#8212; Encapsulated PostScript. This is a common format in professional printing.</li>
+<li>GIF bitmap image &#8212; A legacy graphics format prevalent on the web.</li>
+<li>HTML image map &#8212; A hypertext file and a JPEG, PNG, or GIF image. URL actions in the original OmniGraffle document are coded into the image map as links so that the image can be clicked to follow them. (Note that actions on lines aren&#8217;t included, but actions on line labels are.)</li>
+<li>JPEG bitmap image &#8212; a popular compressed image format. You can lower the image quality to get a smaller file size.</li>
+</ul>
+<div class="profeature">
+
+<ul>
+<li>OmniGraffle Document (<strong>Pro</strong>) &#8212; an OmniGraffle document. You can make the file read-only (not editable), and you can choose to include linked images in the file so that they show up properly on someone else&#8217;s computer.</li>
+</ul>
+</div>
+
+<ul>
+<li>OmniGraffle Stencil, OmniGraffle Template &#8212; Resources for OmniGraffle.</li>
+<li>OmniOutliner 3 &#8212; Represent the diagram as a text outline, using the connection lines between shapes to create a hierarchy. This doesn&#8217;t work as well for diagrams that don&#8217;t have strictly tree-like structures.</li>
+<li>PDF vector image &#8212; Portable Document Format. This is a nice cross-platform format that has good support for both vector components and bitmaps.</li>
+<li>PNG bitmap image &#8212; Portable Network Graphics, a popular format for the Web. This format uses lossless compression to retain the details of an image while decreasing its file size. It supports transparency.</li>
+</ul>
+<div class="profeature">
+
+<ul>
+<li>Photoshop<span class="superscript">&#174;</span> image (<strong>Pro</strong>) &#8212; Exports a layered .psd file that can be opened in Adobe<span class="superscript">&#174;</span> Photoshop<span class="superscript">&#174;</span>, or other graphics apps that can interpret a .psd file.</li>
+<li>SVG vector drawing (<strong>Pro</strong>) &#8212; An open Internet standard that uses XML.</li>
+</ul>
+</div>
+
+<ul>
+<li>TIFF bitmap image &#8212; Tagged Image File Format. This format supports transparency.</li>
+</ul>
+<div class="profeature">
+
+<ul>
+<li>Visio<span class="superscript">&#174;</span> XML document (<strong>Pro</strong>) &#8212; The XML-based file format for the Microsoft<span class="superscript">&#174;</span> diagramming application.</li>
+</ul>
+</div>
+
+<p>Depending on the file format you choose, you have different options. Most offer an Export Area option, with which you can choose how much of the document to export.</p>
+
+<ul>
+<li>Current Selection &#8212; Only export the objects that are selected right now.</li>
+<li>All Objects &#8212; Export all of the objects on the canvas, but not the empty areas.</li>
+<li>Specific Region &#8212; Specify a precise region of the canvas to export.</li>
+<li>Current Canvas &#8212; Export the entire canvas.</li>
+<li>Entire Document &#8212; Export everything, creating one image file for each canvas.</li>
+</ul>
+
+<p>Depending on the format you choose, you can also choose a scale for exporting smaller or larger than actual size, the resolution, the compression level, and whether to make the background transparent.</p>
+<div class="profeature">
+
+<h2 id="applescript">AppleScript Support (<strong>Pro</strong>)</h2>
+
+<p>OmniGraffle has extensive AppleScript support, making it easy for you to automate tasks within or to create entirely new OmniGraffle projects. To find out more about how OmniGraffle&#8217;s AppleScript object model and commands, launch AppleScript Editor (<em>/Applications/Utilities</em>, or use <strong>Shift-Command-U</strong> while in the Finder), choose <strong>File &#x25b8; Open Dictionary</strong>, and then choose your version of OmniGraffle from the Open Dictionary dialog.</p>
+
+<p>You can store AppleScripts in OmniGraffle&#8217;s scripts folder, for easy access from the Scripts menu. You can also attach scripts to individual objects on a canvas, using the Action inspector. When you activate the Browse tool, then click an object with a script attached, the script runs.</p>
+
+<p>If you select some objects and then choose <strong>Edit &#x25b8; Copy As &#x25b8; AppleScript</strong> from the menu bar, you get the exact lines of AppleScript necessary to create those objects. This is a great way to learn how OmniGraffle&#8217;s AppleScript support works, or to add specific objects to your own scripts.</p>
+</div>
+
+<h2 id="linkback">LinkBack</h2>
+
+<p>LinkBack is a way of embedding content between applications in such a way that you can always go back and edit the content with the software used to create it originally.</p>
+
+<p>For lots of information about LinkBack, and a list of applications that support it, check the <a href="http://github.com/omnigroup/LinkBack">LinkBack repository on GitHub</a>.</p>
+
+<p>To embed OmniGraffle content in another LinkBack application, just copy and paste the content like you would normally. The same goes for embedding other applications&#8217; content in OmniGraffle diagrams.</p>
+
+<p>To embed OmniGraffle content inside a single object in OmniGraffle, select all of the objects on your canvas (<strong>Command-A</strong>), choose <strong>Edit &#x25b8; Copy As &#x25b8; PDF</strong> from the menu bar, and then Paste (<strong>Command-V</strong>). The objects you copied become a single image; double-clicking the object opens a new OmniGraffle window in which you can edit the objects to your heart&#8217;s content.</p>
+
+<p>To edit OmniGraffle content embedded in another application:</p>
+
+<ul>
+<li><p>Double-click the OmniGraffle content in the other application&#8217;s document; an OmniGraffle window appears containing the content.</p></li>
+<li><p>Edit the content in the OmniGraffle window, just as you normally would.</p></li>
+<li><p>In OmniGraffle, choose <strong>File &#x25b8; Save</strong>; the content in the other application updates automatically.</p></li>
+<li><p>To edit other LinkBack applications&#8217; content embedded in an OmniGraffle diagram, just double-click it. When you save in the other application, the content in the OmniGraffle diagram updates.</p></li>
+</ul>
+
+<h2 id="regexsyntax">Using Regular Expressions in OmniGraffle</h2>
+
+<p>OmniGraffle&#8217;s Find dialog supports the use of some simple regular expressions. A regular expression is a single string that represents a whole set of strings. The following syntax is used:</p>
+
+<ul>
+<li><strong><code>a*</code></strong> &#8212; zero or more instances of <strong><code>a</code></strong> (matches the longest string possible)</li>
+<li><strong><code>a*?</code></strong> &#8212; zero or more instances of <strong><code>a</code></strong> (matches the shortest string possible)</li>
+<li><strong><code>a+</code></strong> &#8212; one or more instances of <strong><code>a</code></strong> (matches the longest string possible)</li>
+<li><strong><code>a+?</code></strong> &#8212; one or more instances of <strong><code>a</code></strong> (matches the shortest string possible)</li>
+<li><strong><code>a?</code></strong> &#8212; zero or one instance of <strong><code>a</code></strong></li>
+<li><strong><code>^</code></strong> &#8212; beginning of a line</li>
+<li><strong><code>$</code></strong> &#8212; end of a line</li>
+<li><strong><code>.</code></strong> &#8212; any character</li>
+<li><strong><code>[a-z]</code></strong> &#8212; all characters between <strong><code>a</code></strong> and <strong><code>z</code></strong></li>
+<li><strong><code>[abc-]</code></strong> &#8212; <strong><code>a</code></strong>, <strong><code>b</code></strong>, <strong><code>c</code></strong>, or <strong><code>-</code></strong></li>
+<li><strong><code>(abc)</code></strong> &#8212; matches <strong><code>abc</code></strong> and stores it as a group. Use the <strong>Select or Replace</strong> pop-up menu in the Find dialog to select or replace only one of these groups rather than the whole expression.</li>
+<li><strong><code>\1</code></strong> &#8212; text of first matched group</li>
+<li><strong><code>a|b</code></strong> &#8212; <strong><code>a</code></strong> or <strong><code>b</code></strong></li>
+<li><strong><code>\n</code></strong> &#8212; newline</li>
+<li><strong><code>\r</code></strong> &#8212; carriage return</li>
+<li><strong><code>\t</code></strong> &#8212; tab character</li>
+<li><strong><code>\d</code></strong> &#8212; digit</li>
+<li><strong><code>\D</code></strong> &#8212; non-digit</li>
+<li><strong><code>\w</code></strong> &#8212; word character (alphanumeric or underscore)</li>
+<li><strong><code>\W</code></strong> &#8212; non-word character</li>
+<li><strong><code>\s</code></strong> &#8212; whitespace</li>
+<li><strong><code>\S</code></strong> &#8212; non-whitespace</li>
+<li><strong><code>\</code></strong> &#8212; escape the next character</li>
+</ul>
+
+<p>Regular expressions are very popular, so you should be able to find plenty of information about them on the internet or in a good library or bookstore. Here are a few examples to get you started:</p>
+
+<ul>
+<li><strong><code>&amp;\s*$</code></strong> &#8212; matches whitespace at the end of a line.</li>
+<li><strong><code>&lt;.*?&gt;</code></strong> &#8212; matches strings that begin with <code>&lt;</code> and end with <code>&gt;</code>, such as XML tags.</li>
+<li><strong><code>&amp;\S+@\S+</code></strong> &#8212; very liberally matches things that resemble email addresses (<em>anything@anything</em>).</li>
+<li><strong><code>(19|20)\d\d-\d\d?-\d\d?</code></strong> &#8212; matches dates in the format YYYY-MM-DD, between 1900 and 2099</li>
+</ul>
+
+</section>
+</body>
+</html>

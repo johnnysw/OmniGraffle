@@ -1,0 +1,191 @@
+* {
+    margin: 20;
+    padding: 20;
+}
+/* This sets the viewport's desired width, along with minimum and max widths */
+
+@media (max-width: 800px) and (min-width: 600px) {
+@-viewport {
+	width: 800px;
+}
+}
+
+/* General Page Styles */
+
+html {
+	min-height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(HelpImages/og61_helpglyphpattern.png);
+}
+
+
+/* One Page Wrapper to Bind Them */
+#helpwrapper {
+	width: 800px;
+	background: #FFFFFF;
+}
+
+/* The Primary Boxes: There are two sides to this design, denoted by the left and right box. These are contained within the wrapper. */
+#leftbox {
+	float: left;
+	width: 70%;
+}
+
+#rightbox {
+	content: url(HelpImages/og61_iconsplit.png);
+	float: right;
+	width: 30%;
+	padding-top: 29px;
+	padding-bottom: 29px;
+}
+
+/* Contents of the leftbox; the rightbox is standalone. */
+
+#titlebox {
+	width: 100%;
+	height: 125px;
+	text-align: center;
+}
+
+#leftnav {
+	float: left;
+	text-align: left;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#rightnav {
+	float: right;
+	text-align: left;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#one-column-nav {
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#bottomnav {
+	clear: both;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Styles for the OmniApp name at the top. */
+.title {
+	font-family: "HelveticaNeue-UltraLight";
+	font-weight: normal;
+	font-size: 48pt;
+	color: #1568a6;
+	position: absolute;
+	top: 5px;
+	width: 475px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Column headings for the TOC */
+#navheader {
+	font-family: "HelveticaNeue-Medium";
+	font-weight: normal;
+	font-size: 14pt;
+	color: #333;
+	margin-bottom: -4px;
+}
+
+#navheader.lefthead {
+	padding-left: 30px;
+}
+
+#navheader.righthead {
+	padding-right: 30px;
+}
+
+#navheader.bottomhead {
+	margin-bottom: 10px;
+}
+
+/* List styles for the TOC links */
+#leftlist {
+	margin-left: 30px;
+	padding: 0;
+}
+
+#rightlist {
+	margin-left: 50px;
+	padding: 0;
+}
+
+#bottomlist {
+	margin: 0 auto;
+	padding: 0;
+}
+
+#centeredlist {
+	margin: 0 auto;
+	padding: 0;
+}
+
+li {
+	font-family: "HelveticaNeue";
+	font-weight: normal;
+    font-size: 12pt;
+    line-height: 14pt;
+    padding-bottom: 14px;
+    list-style-type: none;
+}
+
+/* Link styles */
+
+a, a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1568a6;
+}
+
+/* Icons */
+img.icon {
+	position: absolute;
+	z-index: -1;
+	max-width: 9pt;
+	text-align: right;
+	margin-left: -20px;
+	padding-right: 10px;
+}
+
+/* Tweaks to the alignment of the icons so these sit on a baseline properly */
+#welcome.icon {
+	padding-top: 1px;
+}
+
+#sync.icon {
+	padding-top: 1px;
+}
+
+#tour.icon {
+	padding-top: 3px;
+}
+
+#inbox.icon {
+	padding-top: 4px;
+}
+
+#contexts.icon {
+	padding-top: 1px;
+}
+
+#perspectives.icon {
+	padding-top: 3px;
+}
